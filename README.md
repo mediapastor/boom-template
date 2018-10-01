@@ -1,3 +1,23 @@
+FROM: https://www.lowrisc.org/blog/2017/11/seventh-risc-v-workshop-day-one/
+
+Industrial-strength high-performance RISC-V processors for energy-efficient computing: Dave Ditzel
+Coming out of “stealth mode” in this talk.
+Chris Celio is joining Esperanto, but will continue to maintain and support BOOM. Esperanto will also be implementing even higher performance out-of-order processors.
+Esperanto have been pursuing an implementing of the draft Vector ISA in order to understand design trade-offs.
+RISC-V is off to a great start, but many in industry view RISC-V as a curiosity or toy, only for low end. Repeatedly see questions about high-end designs (in Verilog!), graphics, machine learning, or HPC applications.
+See Esperanto as complementing existing core vendors, “expanding RISC-V’s piece of the pie”.
+Experanto is designing a high-performance RISC-V core comparable to the best IP alternatives. It is designing an energy-efficient RISC-V core for high TeraFLOP computing needs. The goal is to make RISC-V more compelling than the other high-end alternatives.
+Will produce IP with human readable, synthesizable Verilog.
+Esperanto is building the highest TeraFLOPS per Watt machine learning computing system, and it will be based on the RISC-V ISA
+ET-Maxion will be the highest single thread performance 64-bit RISC-V processor. Starting from BOOM v2, but expect substantial changes. Optimized for 7nm CMOS. This will be used in Esperanto’s products and made available as a licensable core.
+Second core is the ET-Minion. This is intended to do all the heavy floating point work, with very high floating point throughput and energy efficiency. This will be a 64-bit RISC-V core with vector extensions, an in-order pipeline, and extra instruction extensions for machine learning. Also have multiple hardware threads of execution. Like the ET-Maxion, this will be used in Esperanto products and available as a licensable core.
+Putting these together in a product: Esperanto’s AI supercomputer on a chip. 16 64-bit ET-Maxion RISC-V cores with private L1 and L2 caches, 4096 64-bit ET-Minion RISC-V cores each with their own vector floating point unit, hardware accelerators, Network on Chip to allow processors to reside in the same address space, multiple levels of cache, etc.
+Other companies are proposing special purpose hardware for machine learning using proprietary instruction sets. Esperanto want to base all processing on RISC-V, adding instruction extensions and hardware accelerators where necessary.
+Also looked at using RISC-V for graphics. Wrote a shader compiler that can generate RISC-V compilers, and the code to distribute the workload across thousands of cores.
+Argue that proprietary, custom instruction sets are a bad choice. Instead, make general purpose RISC-V processors with domain specific extensions when needed.
+
+
+
 # RISC-V BOOM Project Template
 
 This is a starter template for your own RISC-V BOOM project.
